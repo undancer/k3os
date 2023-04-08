@@ -14,6 +14,7 @@ RUN gobuild -o /output/metadata
 
 FROM gobuild as k3os
 ARG VERSION
+ENV GOPROXY https://goproxy.cn,direct
 COPY go.mod $GOPATH/src/github.com/rancher/k3os/
 COPY go.sum $GOPATH/src/github.com/rancher/k3os/
 COPY /pkg/ $GOPATH/src/github.com/rancher/k3os/pkg/
