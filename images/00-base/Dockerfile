@@ -1,11 +1,11 @@
 ### BASE ###
-FROM alpine:3.14 as base
+FROM alpine:3.17 as base
 ARG ARCH
 RUN apk --no-cache add \
     bash \
     bash-completion \
     blkid \
-    busybox-initscripts \
+    busybox-openrc \
     ca-certificates \
     connman \
     conntrack-tools \
