@@ -14,7 +14,6 @@ ENV DAPPER_SOURCE /go/src/github.com/rancher/k3os/
 ENV DAPPER_OUTPUT ./build ./dist
 ENV DAPPER_DOCKER_SOCKET true
 ENV HOME ${DAPPER_SOURCE}
-ENV GOPROXY https://goproxy.cn,direct
 WORKDIR ${DAPPER_SOURCE}
 ENTRYPOINT ["./scripts/entry"]
 CMD ["ci"]
